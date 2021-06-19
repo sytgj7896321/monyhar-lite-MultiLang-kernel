@@ -39,6 +39,7 @@ class Monyhar:
     def about():
         print("Monyhar Browser,made by tucaoba233.")
         print("©CopyRight 2021-2021 tucaoba233, All Rights Reserved.")
+        print("This project use GPL-3.0 License")
 
 
 global url
