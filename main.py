@@ -45,8 +45,6 @@ class Monyhar:
 global url
 url = input("url:")
 
-if url == about:
-    Monyhar.about()
 if "www." not in url:
     url = "www." + url
 print("Auto inserted 'www.")
@@ -55,3 +53,5 @@ if "http://" not in url:
 print("Auto inserted 'http://'.")
 
 Monyhar.surf_internet(url)
+if input("Help-About?[Y/n]") == "Y":
+    Monyhar.about()
