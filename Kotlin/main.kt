@@ -61,7 +61,7 @@ object Monyhar {
         print(html)
     }
     fun about() {
-        print("Monyhar Browser,made by tucaoba233.")
-        print("©CopyRight 2021-2021 tucaoba233, All Rights Reserved.")
+        print("Monyhar Browser,made by asuka-mio.")
+        print("©CopyRight 2021-2021 asuka-mio, All Rights Reserved.")
     }
 }
