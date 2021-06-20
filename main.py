@@ -45,6 +45,8 @@ class Monyhar:
 global url
 url = input("url:")
 
+if url == about:
+    Monyhar.about()
 if "www." not in url:
     url = "www." + url
 print("Auto inserted 'www.")
