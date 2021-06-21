@@ -1,30 +1,17 @@
-'''
------------------------------------------------------------------
-HtmlDownloader
-'''
+import urllib.request
 
 
-class HtmlDownloader(object):
-    def download(self, url):
-        print
-        "start download"
-        if url is None:
-            return None
-            print
-            "url is None"
-        user_agent = 'Monyhar/0.1 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) ' \
-                     'Chrome/63.0.3239.108 Safari/537.36'
-        headers = {'User-Agent': user_agent}
-        print
-        "start requests"
-        r = requests.get(url, headers=headers)
-        # 判断响应状态
-        if r.status_code == 200:
-            r.encoding = 'utf-8'
-            print
-            "该页面下载成功！{}".format(url)
-            return r.text
-        else:
-            print
-            "该页面下载失败！{}".format(url)
-        return None
+class HtmlDownloader:
+    def get_html(self):
+        html = urllib.request.urlopen(self).read()
+        return html
+
+    def save_html(file_name, file_content):
+        #    注意windows文件命名的禁用符，比如 /
+        with open(file_name.replace('/', '_') + ".html", "wb") as f:
+            #   写文件用bytes而不是str，所以要转码
+            f.write(file_content)
+            f.close()
+
+
+
