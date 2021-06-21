@@ -31,15 +31,19 @@ else:
 
 class Monyhar:
     def surf_internet(self):
-        html = requests.get(self, url)
+        html = requests.get(self)
         print(html.status_code)  # print the http code returned.
         print(html.text)  # print text returned.
+        html = html.status_code
 
     @staticmethod
     def about():
         print("Monyhar Browser,made by tucaoba233.")
         print("©CopyRight 2021-2021 tucaoba233, All Rights Reserved.")
         print("This project use GPL-3.0 License")
+
+    def detection(self):
+        print(self)
 
 
 global url
@@ -53,5 +57,8 @@ if "http://" not in url:
 print("Auto inserted 'http://'.")
 
 Monyhar.surf_internet(url)
+
 if input("Help-About?[Y/n]") == "Y":
+    Monyhar.about()
+if input("Do you want to download the files in the page?[Y/n]") == "Y":
     Monyhar.about()
