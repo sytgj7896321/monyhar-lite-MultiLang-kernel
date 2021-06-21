@@ -30,6 +30,9 @@ else:
 
 
 class Monyhar:
+    def __init__(self):
+        print("Welcome to Monyhar Browser")
+
     def surf_internet(self):
         html = requests.get(self)
         print(html.status_code)  # print the http code returned.
