@@ -51,8 +51,8 @@ namespace C_
         public string about()
         {
             return 
-@"Monyhar Browser,made by tucaoba233.
-©CopyRight 2021-2021 tucaoba233, All Rights Reserved.
+@"Monyhar Browser,made by Ranying.
+©CopyRight 2021-2021 Ranying, All Rights Reserved.
 This project use GPL-3.0 License";
         }
         public void save_html(string old_url)
