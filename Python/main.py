@@ -53,11 +53,10 @@ class Monyhar:
     def detection(self):
         print(self)
 
-    def save_html(self, file_content, the_url):
+    def save_html(self,HTML_Page):
         #    注意windows文件命名的禁用符，比如 /
         with open(self.replace('/', '_') + ".html", "wb") as f:
             #   写文件用bytes而不是str，所以要转码
-            file_content = Monyhar.surf_internet(the_url)
             f.write(file_content)
             f.close()
 
